@@ -1,0 +1,175 @@
+/* === GLOBAL === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* biru gradient */
+  background-attachment: fixed;
+  color: #fff; 
+}
+
+/* === CARD UTAMA === */
+.card {
+  background: rgba(20, 20, 40, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(125, 246, 255, 0.2);
+  box-shadow: 0 0 20px rgba(125, 246, 255, 0.2);
+  border-radius: 1rem;
+  color: #ffffff; /* teks di card terang */
+}
+
+/* === INPUT DAN SELECT === */
+.neon-input,
+.neon-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(125, 246, 255, 0.3);
+  color: #ffffff;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.neon-input:focus,
+.neon-select:focus {
+  box-shadow: 0 0 10px #8ffcff;
+  border-color: #8ffcff;
+  outline: none;
+}
+
+/* === BUTTON === */
+.neon-btn {
+  background: linear-gradient(45deg, #00d4ff, #8a2be2);
+  border: none;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.neon-btn:hover {
+  box-shadow: 0 0 15px #8ffcff;
+  transform: scale(1.03);
+}
+
+/* === TO-DO LIST === */
+.neon-list .list-group-item {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.neon-list .list-group-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* === QUOTE & REFLECTION === */
+.neon-quote {
+  font-style: italic;
+  text-align: center;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-left: 3px solid #8ffcff;
+}
+
+/* === TIMER === */
+.timer-display {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+/* === MODAL REFLECTION === */
+.modal-content {
+  background: rgba(30, 30, 60, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(125, 246, 255, 0.2);
+  border-radius: 1rem;
+}
+
+/* === BADGE DAN TEKS KECIL === */
+.neon-badge {
+  background: linear-gradient(90deg, #8a2be2, #00d4ff);
+  color: #ffffff;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* === PROGRESS BAR === */
+.progress {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #00d4ff, #8a2be2);
+  box-shadow: 0 0 10px #00d4ff;
+}
+
+/* === ANIMASI === */
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px #00d4ff; }
+  50% { box-shadow: 0 0 20px #8a2be2; }
+  100% { box-shadow: 0 0 10px #00d4ff; }
+}
+
+.neon-glow {
+  animation: glowPulse 3s infinite alternate;
+}
+
+/* === FIX: Warna teks kontras dan stabil === */
+
+/* warna teks global */
+body, p, span, label, small, strong, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff !important;
+}
+
+/* teks abu Bootstrap jadi putih kebiruan */
+.text-muted,
+small,
+.status-text,
+.progress-info,
+.empty-message {
+  color: #b8f3ff !important;
+}
+
+/* teks pada input, select, textarea */
+input, select, textarea {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.06) !important;
+  border: 1px solid rgba(125,246,255,0.25);
+}
+
+/* placeholder input */
+::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #aeeaff !important;
+  opacity: 1 !important;
+}
+
+/* subtitle timer, badge, label kecil */
+.timer-subtitle,
+.subtitle,
+label,
+.badge {
+  color: #c9f8ff !important;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* kontras background card/modal */
+.card, .modal-content {
+  background: rgba(20, 20, 40, 0.88) !important;
+  color: #ffffff !important;
+}
